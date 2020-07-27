@@ -1,0 +1,50 @@
+{% extends 'base.html'%}
+{% block head %}
+	<title>Home Page</title>
+{% endblock %}
+
+{% block body %}
+
+	<div style="text-align:center; align-items:center;" class="jumbotron">
+      <div class="col-sm-8 mx-auto">
+        <h1 style="text-align: center;" class="Projectss">Projects</h1>
+        <p id="hereare">Here are some of my projects, that I found and published to GitHub.</p>
+        <div class="row">
+          <div class="tres" style=" margin-left:100px;margin-right:30px;margin-bottom:20px;width: 14rem;">
+            <img src="/static/chattt.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Chat Web App</h5>
+              <p class="card-text">Application, made via mongoDB, ReactJS, NodeJs, and Socket.IO</p>
+              <a href="https://github.com/Tik2004/chatik" class="btn btn-primary">Check it out</a>
+            </div>
+          </div>
+          <div class="dos" style="margin-right:10px;margin-bottom:20px; width: 14rem;">
+            <img src="/static/linkshort.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Link Shorten WebSite</h5>
+              <p class="card-text">Application, made via mongoDB, ReactJS, NodeJs, Express.</p>
+              <a href="https://github.com/Tik2004/chatik" class="btn btn-primary">Check it out</a>
+            </div>
+          </div>
+        <div class="row">
+          <div class="card" style=" margin-left:115px;margin-right:30px;margin-bottom:20px;width: 14rem;">
+            <img src="/static/todo.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">To Do</h5>
+              <p class="card-text">To Do app on Flask with insane animations.</p>
+              <a href="https://github.com/Tik2004/ToDowith" class="btn btn-primary">Check it out</a>
+            </div>
+          </div>
+          <div class="uno" style="margin-right:10px;margin-bottom:20px; width: 14rem;">
+            <img src="/static/Reacttt.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">React Web Site</h5>
+              <p class="card-text">React web site, made with redux and react-redux</p>
+              <a href="https://github.com/Tik2004/chatik" class="btn btn-primary">Check it out</a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

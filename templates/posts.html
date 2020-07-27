@@ -1,0 +1,46 @@
+{% extends 'base.html'%}
+{% block head %}
+	<title>Reviews</title>
+{% endblock %}
+
+{% block body %}
+<div class="inputofpost">
+	<h2 style="margin-left: 0; margin-top: 30px; margin-bottom: 10px;" >Write review about me</h2>
+	<form action='/posts' method='POST'>
+			<input class="form-control" type="text" placeholder="Title" type="text" name="title" id="title" aria-label="Title" required>
+		<br>
+		<input class="form-control" type="text" placeholder="Author" type="text" name="author" id="author" aria-label="Author">
+		<br>
+    		<textarea class="form-control" name="content" id="content" placeholder="Content" rows="3" aria-label="Content" required="True"></textarea>
+		<br>
+		<input class="btn btn-success" type="submit" value="Post">
+	</form>
+	<hr>
+</div>
+	<div class="allPosatos">
+		<h1 style="text-align: center;">All reviews</h1>
+	</div>	
+	{% for post in posts %}
+	<div class="allposts">
+		<h2>{{ post.title }}</h2>
+		{% if post.author %}
+			<p>{{post.author}}</p>
+		{% else %}
+			<p>Anonym</p>
+		{%endif%}	
+			<p style="white-space: pre-wrap;" class="border">{{ post.content}}</p>
+		{% if post.is_edited==True %}			
+			Posted at {{post.date_posted.strftime("%H:%M, %d %b %Y")}}
+			<br>
+			Edited at {{post.time_edited.strftime("%H:%M, %d %b %Y")}} 
+		{% else %}	
+			{{ post.date_posted.strftime("%H:%M, %d %b %Y")}} 
+		{%endif%}	
+			<br>
+			<br>
+			<a type="button" class="btn btn-danger" href="/posts/delete/{{post.id}}">Delete</a>
+			<a type="button" class="btn btn-warning" href="/posts/edit/{{post.id}}">Edit</a>
+			<hr>
+		</div>
+	{%endfor%}
+{% endblock %}

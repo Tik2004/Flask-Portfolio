@@ -1,0 +1,22 @@
+body {
+	font-family: Ubuntu;
+}
+
+#checkout {
+    font-family: 'Modak', cursive;
+    text-align: center;
+}
+
+#journeyread {
+    font-family: 'Indie Flower', cursive;
+    margin-top : 100px;
+    margin-bottom : 50px;
+    text-align: center;
+}
+#hereare{
+	font-family: 'Modak', cursive;
+	font-size: 30px;
+}
+.Projectss {
+	font-family: 'Indie Flower', cursive;
+}
